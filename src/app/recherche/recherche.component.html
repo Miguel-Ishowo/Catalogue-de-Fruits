@@ -1,0 +1,32 @@
+<div class="m-2">
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <input type="text" value="a" name="search" ngModel>
+        <button type="submit" class="btn-primary">RECHERCHER</button>
+    </form>
+
+</div>
+
+<div *ngIf="datacheck.length<2" class="ab-info row">
+    <div class="col-md-2 ab-content" *ngFor="let fruit of fruit">
+        <div class="tab-wrap">
+            <div class="ab-info-con">
+                <h5> Fruit N°{{fruit.id}}</h5>
+                <h4>{{fruit.name}}</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="istrue" class="ab-info row">
+    <div class="col-md-2 ab-content" *ngFor="let fruit of datacheck.splice(1)">
+        <div class="tab-wrap">
+            <div class="ab-info-con">
+                <h5> Fruit N°{{fruit.id}}</h5>
+                <h4>{{fruit.name}}</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<ng-template #contenu_pas_bon></ng-template>

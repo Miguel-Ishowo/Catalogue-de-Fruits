@@ -1,0 +1,34 @@
+
+<body>
+
+  <!--contenu-->
+  <section class="mid-sec py-2" id="menu">
+      <div class="container-fluid py-lg-5">
+          <div class="header pb-lg-3 pb-3 text-center">
+              <h3 class="tittle mb-lg-3 mb-2">{{title}}</h3>
+          </div>
+          <div class="middile-inner-con">
+              <div class="tab-main mx-auto text-center">
+
+                  <input id="tab1" routerLink="acceuil" type="radio" name="tabs" checked hidden>
+                  <label for="tab1"><span class="" aria-hidden="true"></span> Acceuil</label>
+
+                  <input id="tab2" routerLink="acceuil/formulaire" type="radio" name="tabs" hidden>
+                  <label for="tab2"><span class="" aria-hidden="true"></span> Ajouter un Fruit</label>
+
+                  <label for="tab3"><span class="" aria-hidden="true"></span>Total: <app-fruits></app-fruits> Fruits</label>
+                  <section id="content1" >
+                    <app-recherche></app-recherche>
+                   
+                </section>
+                <section id="content2">
+                            <app-ajout></app-ajout>
+                </section>
+              </div>
+          </div>
+      </div>
+
+  </section>
+  <!--//mid-sec-->
+
+</body>

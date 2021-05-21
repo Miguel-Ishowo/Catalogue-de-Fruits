@@ -1,0 +1,14 @@
+<form (ngSubmit)="onSubmit(f)" #f="ngForm" class="m-5">
+      <div class="form-group">
+  <label for="new-hero">NOM DU FRUIT : </label>
+  <input type="text" name="champ" id="" ngModel/>   
+    </div>
+<br>
+<br>
+  <button type="submit" class="add-button btn-success" >
+    AJOUTER UN FRUIT
+  </button>
+</form>
+<br>
+
+<button  (click)="reloadPage()" class="btn-primary" > RETOUR</button>
